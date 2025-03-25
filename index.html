@@ -8,21 +8,31 @@
 </head>
 <body>
   <div class="music-player">
-    <div class="header">
-        <input type="text" id="search" placeholder="What do you want to play?">
+    <header>
+        <input type="text" id="search-bar" placeholder="What do you want to play?">
+    </header>
+    <div class="album-display" id="album-display">
+        <h1 id="artist-name">The Weeknd</h1>
     </div>
-    <div class="album-cover">
-        <h1 class="artist-name">The Weeknd</h1>
-    </div>
-    <div class="song-list">
+    <div class="playlist">
         <h2>Popular</h2>
-        <ul id="songs"></ul>
+        <div class="song-item">
+            <img src="album1.jpg" class="album-cover">
+            <span class="song-title">Timeless (feat Playboi Carti)</span>
+            <span class="song-duration">4:16</span>
+            <button class="favorite-btn">+</button>
+        </div>
+        <div class="song-item">
+            <img src="album2.jpg" class="album-cover">
+            <span class="song-title">One Of The Girls (with JENNIE, Lil...)</span>
+            <span class="song-duration">4:04</span>
+            <button class="favorite-btn">+</button>
+        </div>
     </div>
-    <div class="controls">
-        <button id="prev">⏮</button>
-        <button id="play">▶</button>
-        <button id="next">⏭</button>
-    </div>
+    <footer>
+        <button id="play-btn">▶</button>
+        <input type="range" id="progress-bar" min="0" max="100">
+    </footer>
 </div>
 
 
