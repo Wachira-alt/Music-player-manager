@@ -10,10 +10,16 @@ document.addEventListener("DOMContentLoaded", () => {
   let audio = new Audio();
 
   // Fetch song data from db.json (simulated )
-  const songs = [
-      { id: 1, title: "Timeless (feat Playboi Carti)", artist: "The Weeknd", duration: "4:16", url: "song1.mp3", albumCover: "album1.jpg", genre: "pop" },
-      { id: 2, title: "One Of The Girls", artist: "The Weeknd", duration: "4:04", url: "song2.mp3", albumCover: "album2.jpg", genre: "pop" }
-  ];
+  let songs = []; // This will store the fetched songs
+
+  fetch("db.json") // Fetch songs dynamically
+      .then(response => response.json())
+      .then(data => {
+          songs = data.songs; // Store fetched songs
+          renderSongs(songs); // Render them in the UI
+      })
+      .catch(error => console.error("Error fetching songs:", error));
+  
 
   // Render songs dynamically
   function renderSongs(filteredSongs) {
