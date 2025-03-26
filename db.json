@@ -1,0 +1,22 @@
+{
+  "songs": [
+    {
+      "id": 1,
+      "title": "Timeless (feat. Playboi Carti)",
+      "artist": "The Weeknd",
+      "duration": "4:16",
+      "url": "music/song1.mp3",
+      "albumCover": "images/album1.jpg",
+      "genre": "pop"
+    },
+    {
+      "id": 2,
+      "title": "One Of The Girls",
+      "artist": "The Weeknd",
+      "duration": "4:04",
+      "url": "music/song2.mp3",
+      "albumCover": "images/album2.jpg",
+      "genre": "pop"
+    }
+  ]
+}
