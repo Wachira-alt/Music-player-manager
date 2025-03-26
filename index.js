@@ -67,9 +67,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // Search functionality (by title or genre)
   searchBar.addEventListener("input", (e) => {
       const query = e.target.value.toLowerCase();
-      const filteredSongs = songs.filter(song => 
-          song.title.toLowerCase().includes(query) || song.genre.toLowerCase().includes(query)
-      );
+      const filteredSongs = (songs.length > 0) ? songs.filter(song => 
+        song.title.toLowerCase().includes(query) || song.genre.toLowerCase().includes(query)
+    ) : [];
+    
       renderSongs(filteredSongs.length ? filteredSongs : [{ title: "No results found", artist: "", duration: "", albumCover: "", url: "" }]);
   });
 
