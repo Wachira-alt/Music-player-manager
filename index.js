@@ -75,5 +75,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Initial render
-  renderSongs(songs);
+  fetch("db.json")
+    .then(response => response.json())
+    .then(data => {
+        songs = data.songs;
+        renderSongs(songs); // Only render when data is loaded
+    });
+
 });
